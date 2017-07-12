@@ -1,0 +1,114 @@
+* * *  * * * * *  prima por dedicacion a la actividad de salud (B_DED_SALU)* * * * * * * * * * * * 
+30 horas semanales= 650,00 Bs mensuales
+36 horas semanales= 750,00 Bs mensuales
+40 horas semanales= 850,00 Bs mensuales
+ 
+* * * * * * * prima del sistema publico nacional de salud (PSNS)  * * * * * * * * * * * * * * * *
+ 
+solo personal con cargo de: Odontologos, farmaceutas, bioanalistas, nutricionistas, enfermeras(os), tec. radiologia, tec. cardiopulmonar, fisioterapeuta, tec. informacion en salud, psicologos
+36 horas semanales= 1.500,00 Bs mensuales
+40 horas semanales= 2.500,00 Bs mensuales
+
+* * * * * *  * * transporte (TRANSPORTE) * * * *  * * * * * *  * * * * *  * * * * * * * * * * * *
+
+300,00 bs a todos los trabajadores exceptuando los medicos 
+
+
+* * * * *  * * * * * * PRIMA POR FRONTERA (P_FRONT) * * * * * * * * * * * * * * * * * * * * * * *
+
+SOLO EL PERSONAL CON FRONT>0 O UBICACION, DISTRITO Nº2, 3, 4, 6, 7, 8
+
+SALAR_MENS * 40% 
+
+* * * * * * * * * * * PRIMA DE PROFE (P_PROFE) * * * *  * * * * * * * * * * * * * * * * * * * * *
+
+Si el status= TSU             (SALAR_MENS+COMPENSA+B_DED_SALU+TRANSPORTE+P_FRONT) * 14 %
+Si el status= LIC,ABG,ARQ,ING (SALAR_MENS+COMPENSA+B_DED_SALU+TRANSPORTE+P_FRONT) * 16 %
+Si el status= MST,DOC,ESP     (SALAR_MENS+COMPENSA+B_DED_SALU+TRANSPORTE+P_FRONT) * 18 %
+
+* * * * *  * * * * * * salario normal (NORMAL) * * * *  * * * * * * * * * * * * * * * * * * * * *
+
+salario normal= (SALAR_MENS+COMPENSA+B_DED_SALU+TRANSPORTE+P_FRONT+P_PROFE)
+
+* * * * * * * * * * * * * prima por antigÜedad (ANTIGUEDAD) * * *  * * * * *  * * * * * * * * * * 
+
+si ANT1>0 y ANT1<6 y las HORASS=30 salario normal * 2 %
+si ANT1>0 y ANT1<6 y las HORASS=36 salario normal * 4 %
+si ANT1>0 y ANT1<6 y las HORASS=40 salario normal * 6 %
+
+si ANT1>5 y ANT1<11 y las HORASS=30 salario normal * 4 %
+si ANT1>5 y ANT1<11 y las HORASS=36 salario normal * 6 %
+si ANT1>5 y ANT1<11 y las HORASS=40 salario normal * 8 %
+
+si ANT1>10 y ANT1<16 y las HORASS=30 salario normal * 6 %
+si ANT1>10 y ANT1<16 y las HORASS=36 salario normal * 8 %
+si ANT1>10 y ANT1<16 y las HORASS=40 salario normal * 10%
+
+si ANT1>15 y ANT1<21 y las HORASS=30 salario normal * 8 %
+si ANT1>15 y ANT1<21 y las HORASS=36 salario normal * 10 %
+si ANT1>15 y ANT1<21 y las HORASS=40 salario normal * 12 %
+
+si ANT1>20 y las HORASS=30 salario normal * 10 %
+si ANT1>20 y las HORASS=36 salario normal * 12 %
+si ANT1>20 y las HORASS=40 salario normal * 14%
+
+
+* * * * * * * * * *  * * * salario integral (INTEGRAL) * *  * * * *  * * * * * * *  * * * * * * *
+
+SALARIO INTEGRAL= (QUINC_1+QUINC_2+COMPENSA+TRANSPORTE+P_FRONT+ANTIGUEDAD+B_DED_SALU+P_PROFE) 
+
+* * * * *  * * * * * * * * * * * RETENCIONES  * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+si SS=4 y SEGURO>0                       
+seguro social obligatorio (SEGURO)= (INTEGRAL* 12 / 52 * 4% * N_LUN)     
+si REG_PR_EMPL>0
+regimen prestacional de empleo (REG_PR_EMP)= (INTEGRAL* 12 / 52 * 5% * N_LUN)
+si VIVI_HABIT>0
+ley de vivienda y habitat (VIVI_HABIT)= (INTEGRAL* 1 / 100)
+si FONDO>0
+fondo de jubilaciones y prestaciones (FONDO)= (SALAR_MENS * 3%)
+si SIND>0
+Sunep-sas (SINDICATO)= (SUELDO MINIMO * 2%)
+si DIA>0
+DESCUENTO POR FALTAS INJUSTIFICADAS (DESCUENTO)= (SALAR_MENS / 30 * DIA)
+si SINBO>0
+sindicato bolivariano profesionales de enfermeria (SINBOEN) = (SALAR_MENS * 1%)
+si FRAS>0
+seguros funerarios servifraseca (FRASECA)= 650,00 Bs quincenal
+si COL>0
+colegio de enfermeria (COLEGIO)= 1.650,00 Bs mensuales 
+si inpre=1
+descuento por Inprenfermera (INPRENFERM)= 300,00 Bs mensuales
+
+
+
+* * *  * * * * *  * * * * * * * * contrato variable * * * *  * * * * * * * * * * * * * * * * * * * *
+
+hayar 12ava de vacaciones (VACACIONES / 12)
+hayar 12ava de aguinaldos (BFA_2016 / MES)
+
+domingos y feriados (DOMINGOS, FERIADOS)= ((((SALAR_MENS+COMPENSA+VACA_12AVA+AGUI_12AVA+B_DED_SALU+PSNS+TRANSPORTE+P_ESPEC+P_PROFE+ANTIGUEDAD+P_FRONT)/30)* 2) * FE o DO)
+guardias nocturnas (BONO_NOCT)= ((((((SALAR_MENS+B_DED_SALU)/30)/6*) 50%) * 10) * BO)
+guardias nocturnas para el personal del bunker hospital central
+si BO>12 y BO<26
+(BONO_NOCT)= ((((((SALAR_MENS+B_DED_SALU)/30)/6*) 50%) * 4) * BO)
+
+la suma de (DOMINGOS+FERIADOS+BONO_NOCT) se coloca en la columna (CONTRATO)
+
+* * * *  * * * * *  * * * * calculo de asignaciones, deducciones y acumulado * * * * *  * * * * * * * *
+
+TOTAL_DE_1= SEGURO+REG_PR_EMP+VIVI_HABIT+FONDO+SINDICATO+FRASECA+INPRENFERM
+TOTAL_DE2=  STORE SEGURO1+REG_PR_EM1+VIVI_HABI1+FONDO2+FRASECA+COLEGIO+SINBOEN+SOVENPFA
+TOTAL_DEDU= TOTAL_DE_1+TOTAL_DE2
+
+SUMA=(QUINC_1+EVAL_1RA+P_PROFE+QUINC_2+EVAL_2DA+P_FRONT+ANTIGUEDAD+B_DED_SALU+P_HIJOS+PSNS+DOMINGOS+FERIADOS+BONO_NOCT+TRANSPORTE)
+MONTO= (SUMA-TOTAL_DEDU)
+NETO_1RA= ((QUINC_1+EVAL_1RA+P_PROFE)-TOTAL_DE_1)
+
+NETO_2DA= ((QUINC_2+EVAL_2DA+B_DED_SALU+P_FRONT+ANTIGUEDAD+P_HIJOS+PSNS+TRANSPORTE)-TOTAL_DE2)
+
+
+
+
+
+

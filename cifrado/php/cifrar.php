@@ -1,0 +1,24 @@
+<?php
+
+$ccdt=($_SESSION['nombre_scf'].$_SESSION['ccdt_scf'].$_SESSION['cedula_scf']);
+
+
+
+
+	function cif_decif($action, $cadena){
+			
+			global $ccdt;
+			if($action == '1') {
+			
+		    $key=$ccdt;  // Una clave de codificacion, debe usarse la misma para encriptar y desencriptar
+		    $salida = base64_encode(mcrypt_encrypt(MCRYPT_RIJNDAEL_256, md5($key), $cadena, MCRYPT_MODE_CBC, md5(md5($key))));
+		    return $salida; //Devuelve el string encriptado
+		 }
+			if($action == '2') {
+		     $key=$ccdt;  // Una clave de codificacion, debe usarse la misma para encriptar y desencriptar
+		     $salida = rtrim(mcrypt_decrypt(MCRYPT_RIJNDAEL_256, md5($key), base64_decode($cadena), MCRYPT_MODE_CBC, md5(md5($key))), "\0");
+		    return $salida;  //Devuelve el string desencriptado
+		}
+	}
+
+?>

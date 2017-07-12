@@ -1,0 +1,65 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<script type='text/javascript' src='../js/jquery-3.1.1.js'></script>
+</head>
+
+ <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="../menu/index.php">Sistema de Cifrado</a>
+    </div>
+<ul class="nav navbar-nav">
+      <li class="active"><a href="../menu/index.php">Inicio</a></li>
+      
+       <li><a href="#">Registrar</a></li>
+          
+      <li><a href="#">Page 2</a></li>
+      <li><a href="#">Page 3</a></li>
+    </ul>
+  
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> <?php session_start(); echo"".$_SESSION['login_scif']; ?></a></li>
+      <li><a href="../index.php"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
+    </ul>
+  </div>
+ 
+
+</nav>
+
+<div class="col-md-4"></div>
+<div class="col-md-4 col-xs-12" >
+	<form class="form-inline" method="post" action="../php/grd_cnt.php">
+	
+<?php include('../php/seleccion.php'); ?>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Correo electrónico</label></br>
+    <input type="text" class="form-control" id="inputSeleccionado" name="correo" placeholder="xxxxxxxx@xxxx.xxx" >
+  </div><br><br>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Nombre de usuario para logueo</label></br>
+    <input type="text" class="form-control" id="inputSeleccionado" name="usuario" placeholder="Nombre de usuario" >
+  </div></br></br>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Contraseña</label></br>
+    <input type="text" class="form-control" id="inputSeleccionado" name="pass" placeholder="Contraseña" required="">
+  </div></br></br>
+    <div class="form-group">
+    <label for="exampleInputEmail1">Descripción</label></br>
+    <input type="text" class="form-control" id="inputSeleccionado" name="descr" placeholder="Descripcion" required="">
+  </div></br></br>
+    <div class="form-group">
+    <label for="exampleInputEmail1">Observación</label></br>
+    <input type="text" class="form-control" id="inputSeleccionado" name="obser" placeholder="Observacion" required="">
+  </div></br></br>
+</br></br>
+<div><button type="submit" class="btn btn-default">Cifrar</button></div>
+</form></div>
+
+
+<div class="col-md-4"></div>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+</body>
+</html>

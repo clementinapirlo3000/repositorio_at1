@@ -1,0 +1,86 @@
+<?php
+include_once('../php/session.php');
+
+?>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+</head>
+
+ <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Sistema de Cifrado</a>
+    </div>
+<ul class="nav navbar-nav">
+      <li class="active"><a href="#">inicio</a></li>
+      
+       <li><a href="registro.php">Registrar</a></li>
+          
+      <li><a href="../php/cifrar.php">Page 2</a></li>
+      <li><a href="#">Page 3</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> <?php session_start(); echo"".$_SESSION['login_scf']; ?></a></li>
+      <li><a href="../index.php"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
+    </ul>
+  </div>
+ 
+
+</nav>
+ <div>
+<center><pre style="font: 4px/2px monospace;">@@@@*_~=@@@=~-*@@@@
+@@?-;=i+-:-+i=;-?@@
+@%:=ioi~:=:~ioii:%@
+@+=i****o^o****ii+@
+$=~o$@@@*i*@@@$o-=$
+e;;+@@@@@+@@@@@+;+e
+*::-@@@@@@@@@@@-::*
+!--.@@@@@@@@@@@.--!
+%~^:@@@@@@@@@@@:..%
+@;..e@@@@@@@@@e.~;@
+@-:-o&@@@@@@@&o_:-@
+@#-:ii@@@@@@@ii;-#@
+@@;*~o=@@@@@=o-*;@@
+@@@-*_+=@@@=+:*-@@@
+@@@@:i=:+@+:=i:@@@@
+@@@@&++=-^-=++&@@@@
+@@@@@#i;+_+;i#@@@@@
+@@@@@@#o;:;o#@@@@@@
+@@@@@@$*;:o*O&@@@@@
+@@@@@$ei:=oo!!@@@@@
+@@@@@@@@:+o@@@@@@@@
+@@@@@@@@:+o@@@@@@@@
+@@@@@@@@:+o@@@@@@@@
+@@@@@@@@:+o@@@@@@@@
+@@@@@@@@:+o@@@@@@@@
+@@@@@@@@:+o@@@@@@@@
+@@@@@@@@:+o@@@@@@@@
+@@@@@@@@:+o@@@@@@@@
+@@@@@@@@:+o@@@@@@@@
+@@@@@@@@:+o@@@@@@@@
+@@@@@@@@:+o@@@@@@@@
+@@@@@@@@:+o@@@@@@@@
+@@@@@@@@:+o@@@@@@@@
+@@@@@@@@:+o@@@@@@@@
+@@@@@@@@:+o@@@@@@@@
+@@@@@@@@:+o@@@@@@@@
+@@@@@@@@:+o@@@@@@@@
+@@@@@@@@:+o@@@@@@@@
+@@@@@@@@:+o@@@@@@@@
+@@@@@@@@:+o@@@@@@@@
+@@@@@@@@:+o?!!e!@@@
+@@@@@@@@:+oeo;-=@@@
+@@@@@@@@:+oeoi&&@@@
+@@@@@@@@:+oeo+e!@@@
+@@@@@@@@:+oeo;-=@@@
+@@@@@@@@:+oeoi@@@@@
+@@@@@@@@:+oeo+oe@@@
+@@@@@@@@:+oeo;-=@@@
+@@@@@@@@:+o@@@@@@@@
+@@@@@@@@:+o@@@@@@@@
+</pre></center>  
+  </div>
+</html>

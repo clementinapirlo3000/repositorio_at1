@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagrama nombreAutor="" formula="fk_%c" version="8" nombreProyecto="sis_cif">
+  <DataBase>2</DataBase>
+  <lista-item>
+    <item type="modelo-tabla" id="{288fd83b-704f-48b1-9d00-da746ad4094e}">
+      <nombre>scf_us_01</nombre>
+      <posicion>
+        <x>-165</x>
+        <y>-244</y>
+      </posicion>
+      <lista-columnas>
+        <columna llaveprimaria="1" id="{70c41dc0-854a-4cc4-a5a4-cf5a9cce7e08}" notas="" nombre="scfus_id" llaveUnica="" nulo="0" tipoDato="INTEGER"/>
+        <columna llaveprimaria="0" id="{3153f295-460a-4f17-8723-6b5affa4250c}" notas="" nombre="scfus_nom" llaveUnica="" nulo="0" tipoDato="VARCHAR(80)"/>
+        <columna llaveprimaria="0" id="{8ddc5b04-9e99-4bcb-a11a-af3559ead4ba}" notas="" nombre="scfus_ape" llaveUnica="" nulo="0" tipoDato="VARCHAR(80)"/>
+        <columna llaveprimaria="0" id="{cdc16561-44b0-4cdf-b741-d634e205ce1e}" notas="" nombre="scfus_nac" llaveUnica="" nulo="0" tipoDato="CHAR(10)"/>
+        <columna llaveprimaria="0" id="{046daf15-800e-417f-8135-be6e4dd94a8a}" notas="" nombre="scfus_fec" llaveUnica="" nulo="0" tipoDato="DATE"/>
+        <columna llaveprimaria="0" id="{c3f0aad6-74cf-4736-b1ba-78ff15669620}" notas="" nombre="scfus_em" llaveUnica="" nulo="0" tipoDato="VARCHAR(100)"/>
+        <columna llaveprimaria="0" id="{f2a4f338-762f-40d5-b954-3783277135ce}" notas="" nombre="scfus_ctlf" llaveUnica="" nulo="0" tipoDato="INTEGER(4)"/>
+        <columna llaveprimaria="0" id="{e78476d7-5d68-444a-9394-6149ea6607fd}" notas="" nombre="scfus_tlf" llaveUnica="" nulo="0" tipoDato="INTEGER(7)"/>
+        <columna llaveprimaria="0" id="{9f4665a0-4b11-4f98-a7f5-35424b94ff1e}" notas="" nombre="scfus_nus" llaveUnica="" nulo="1" tipoDato="VARCHAR(50)"/>
+        <columna llaveprimaria="0" id="{006a3d69-aee3-4f7e-91f2-71f8de9e5098}" notas="" nombre="scfus_clci" llaveUnica="" nulo="0" tipoDato="LONGTEXT"/>
+        <columna llaveprimaria="0" id="{06138797-0ce4-4b57-8d49-2373e363357c}" notas="" nombre="scfus_cllg" llaveUnica="" nulo="0" tipoDato="LONGTEXT"/>
+        <columna llaveprimaria="0" id="{66f69db4-9c30-4d72-8a20-cea403f7fda0}" notas="" nombre="scfus_cd" llaveUnica="" nulo="0" tipoDato="VARCHAR(10)"/>
+        <columna llaveprimaria="0" id="{e962b698-c150-4680-a084-192f4acb1177}" notas="" nombre="scfus_act" llaveUnica="" nulo="0" tipoDato="vARCHAR(40)"/>
+        <columna llaveprimaria="0" id="{8d9212d9-bd48-4d62-a37f-af7a3d8ddab3}" notas="" nombre="scfus_st" llaveUnica="" nulo="0" tipoDato="INTEGER(1)"/>
+      </lista-columnas>
+    </item>
+    <item type="modelo-tabla" id="{1de17745-e77a-4aa7-bf56-5a559a0e552c}">
+      <nombre>scf_cnt_02</nombre>
+      <posicion>
+        <x>108</x>
+        <y>-217</y>
+      </posicion>
+      <lista-columnas>
+        <columna llaveprimaria="1" id="{4cd2a98f-d6ac-4578-af91-5c9c0cf73cad}" notas="" nombre="scfcnt_id" llaveUnica="" nulo="0" tipoDato="INTEGER"/>
+        <columna llaveprimaria="0" id="{3229ae11-dad0-4273-a528-e1549ca607b5}" notas="" nombre="scfcnt_cr" llaveUnica="" nulo="0" tipoDato="LONGTEXT"/>
+        <columna llaveprimaria="0" id="{6adf8fe1-ae85-4bba-b31f-cd563354af74}" notas="" nombre="scfcnt_us" llaveUnica="" nulo="0" tipoDato="LONGTEXT"/>
+        <columna llaveprimaria="0" id="{5e4b5fd3-3fab-452b-a34d-e6adeb51f279}" notas="" nombre="scfcnt_ct" llaveUnica="" nulo="0" tipoDato="LONGTEXT"/>
+        <columna llaveprimaria="0" id="{dc2828ea-b292-4ea5-b779-bc2809285969}" notas="" nombre="scfcnt_dsc" llaveUnica="" nulo="0" tipoDato="LONGTEXT"/>
+        <columna llaveprimaria="0" id="{52cef37a-2719-4322-a157-7e19941e0657}" notas="" nombre="scfcnt_ob" llaveUnica="" nulo="0" tipoDato="LONGTEXT"/>
+        <columna llaveprimaria="0" id="{3d4d5f5c-0909-4976-93e3-d6df79e68d61}" notas="" nombre="scfcnt_st" llaveUnica="" nulo="0" tipoDato="INTEGER(1)"/>
+      </lista-columnas>
+    </item>
+    <item type="modelo-tabla" id="{f7b8f3dd-b711-4c6c-a2af-c1fb9c2b0426}">
+      <nombre>scf_lg_03</nombre>
+      <posicion>
+        <x>-494</x>
+        <y>-181</y>
+      </posicion>
+      <lista-columnas>
+        <columna llaveprimaria="1" id="{0beac4f8-1e0c-4eda-980e-a2173053cf56}" notas="" nombre="scflg_id" llaveUnica="" nulo="0" tipoDato="INTEGER"/>
+        <columna llaveprimaria="0" id="{aeb09ab7-ab95-41c5-8ab0-a0bbdee1218b}" notas="" nombre="scflg_dn" llaveUnica="" nulo="0" tipoDato="LONGTEXT"/>
+        <columna llaveprimaria="0" id="{43cc66bf-2bc1-45a4-b974-c021b74f7884}" notas="" nombre="scflg_dv" llaveUnica="" nulo="0" tipoDato="LONGTEXT"/>
+        <columna llaveprimaria="0" id="{78089cfd-8b3a-4d5d-920c-cc2e91eea1e7}" notas="" nombre="scflg_fc" llaveUnica="" nulo="0" tipoDato="VARCHAR(60)"/>
+        <columna llaveprimaria="0" id="{e8e42e0c-ae96-4ef4-94c2-b5b82ca20f45}" notas="" nombre="scflg_dscp" llaveUnica="" nulo="0" tipoDato="LONGTEXT"/>
+        <columna llaveprimaria="0" id="{10466f00-21bf-4798-ad57-66cd342c9a2a}" notas="" nombre="scflg_evnt" llaveUnica="" nulo="0" tipoDato="CHAR(10)"/>
+      </lista-columnas>
+    </item>
+    <item type="modelo-tabla" id="{fd77ad46-a4d2-4745-841d-0c085b2dd295}">
+      <nombre>scf_prc_04</nombre>
+      <posicion>
+        <x>231</x>
+        <y>-8</y>
+      </posicion>
+      <lista-columnas>
+        <columna llaveprimaria="1" id="{844c0bed-04cb-496d-961d-42d3a940a582}" notas="" nombre="scfprc_id" llaveUnica="" nulo="0" tipoDato="INTEGER"/>
+        <columna llaveprimaria="0" id="{4dea15ce-70c5-4f3e-8492-d829c5b3ac4d}" notas="" nombre="scfprc_ds" llaveUnica="" nulo="0" tipoDato="VARCHAR(20)"/>
+      </lista-columnas>
+    </item>
+    <item type="modelo-relacion" id="{37a97d6b-972c-4a23-bac9-ef26e355dcfa}">
+      <inicio>
+        <posicion>
+          <x>37.0469</x>
+          <y>-134.094</y>
+        </posicion>
+        <angulo>0</angulo>
+        <cardinalidad>Uno</cardinalidad>
+        <cardinalidadLinea>Puede</cardinalidadLinea>
+        <owner>{288fd83b-704f-48b1-9d00-da746ad4094e}</owner>
+      </inicio>
+      <final>
+        <posicion>
+          <x>108</x>
+          <y>-142.094</y>
+        </posicion>
+        <angulo>180</angulo>
+        <cardinalidad>Muchos</cardinalidad>
+        <cardinalidadLinea>Debe</cardinalidadLinea>
+        <owner>{1de17745-e77a-4aa7-bf56-5a559a0e552c}</owner>
+      </final>
+    </item>
+    <item type="modelo-relacion" id="{a976bdb0-fd6e-4e3e-aa13-a72a82b59f58}">
+      <inicio>
+        <posicion>
+          <x>-165</x>
+          <y>-134.094</y>
+        </posicion>
+        <angulo>180</angulo>
+        <cardinalidad>Uno</cardinalidad>
+        <cardinalidadLinea>Puede</cardinalidadLinea>
+        <owner>{288fd83b-704f-48b1-9d00-da746ad4094e}</owner>
+      </inicio>
+      <final>
+        <posicion>
+          <x>-298.094</x>
+          <y>-120.094</y>
+        </posicion>
+        <angulo>0</angulo>
+        <cardinalidad>Muchos</cardinalidad>
+        <cardinalidadLinea>Debe</cardinalidadLinea>
+        <owner>{f7b8f3dd-b711-4c6c-a2af-c1fb9c2b0426}</owner>
+      </final>
+    </item>
+    <item type="modelo-relacion" id="{7c197f34-c880-4ddc-9b49-bad83d20b24d}">
+      <inicio>
+        <posicion>
+          <x>324.477</x>
+          <y>-8</y>
+        </posicion>
+        <angulo>90</angulo>
+        <cardinalidad>Uno</cardinalidad>
+        <cardinalidadLinea>Puede</cardinalidadLinea>
+        <owner>{fd77ad46-a4d2-4745-841d-0c085b2dd295}</owner>
+      </inicio>
+      <final>
+        <posicion>
+          <x>202.758</x>
+          <y>-67.1875</y>
+        </posicion>
+        <angulo>270</angulo>
+        <cardinalidad>Muchos</cardinalidad>
+        <cardinalidadLinea>Debe</cardinalidadLinea>
+        <owner>{1de17745-e77a-4aa7-bf56-5a559a0e552c}</owner>
+      </final>
+    </item>
+  </lista-item>
+</diagrama>

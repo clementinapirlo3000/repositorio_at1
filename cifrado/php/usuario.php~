@@ -1,0 +1,94 @@
+<?php
+session_start();
+include('cnx.php');
+   $pass1 = $_POST['pass'];
+    $user = $_POST['user'];
+    $pass=(md5($pass1));
+	 $sql=("SELECT * FROM scf_us_01 WHERE scfus_nom = '$user' AND scfus_cllg = '$pass' ");
+	 $resultado=mysqli_query($conex,$sql);
+	  if( $fila=mysqli_fetch_array($resultado) )
+    {               
+        $id = $fila['scfus_nus'];
+        $estatus = $fila['scfus_st'];
+        $nombre = $fila['scfus_nom'];
+        $apellido = $fila['scfus_ape'];
+        $ced = $fila['scfus_cd']; 
+        //echo $id;
+        $passw = $fila['scfus_cllg'];
+        //echo $passw;
+if ($id==$user && $passw ==$pass) 
+	{
+			if ($estatus=='1') 
+			{
+			/* Creamos la sesión */
+		$_SESSION['login'] = $id;
+		$_SESSION['st'] = $estatus;
+		$_SESSION['nombre'] = $nombre;
+		$_SESSION['apellido'] = $apellido;
+		$_SESSION['cedula'] = $ced;
+		
+ 
+		/* Si no hay una sesión creada, redireccionar al index. */
+			if(empty($_SESSION['login'])) 
+			{ // Recuerda usar corchetes.
+			header('Location: ../index.php');
+			} // Recuerda usar corchetes
+			else
+			{
+	echo"</br>";
+    echo"</br>";
+    echo"</br>";
+    echo"</br>";
+    echo"</br>";
+          echo" <link type='text/css' href='../css/estilos de la pagina principal2.css' rel='stylesheet' /></link>
+          <script type='text/javascript' src='js/jquery_v1.7.1.js'></script>
+          <script   type='text/javascript' src='js/my_script.js'></script>";
+              echo"<div class='titulo'><center><br><h1 style='width:100%;'>(Usuario ".$_SESSION['login']." Validado)</h1></center><br><span style='width:10%;''></span></span></div>";
+           echo "<meta http-equiv='Refresh' content='3;url=index2.php'>"; 
+			}
+}
+else
+{
+	    echo"</br>";
+    echo"</br>";
+    echo"</br>";
+    echo"</br>";
+    echo"</br>";
+          echo" <link type='text/css' href='style/estilos de la pagina principal2.css' rel='stylesheet' /></link>
+          <script type='text/javascript' src='js/jquery_v1.7.1.js'></script>
+          <script   type='text/javascript' src='js/my_script.js'></script>";
+              echo"<div class='titulo'><center><br><h1 style='width:100%;'>(Usuario Inhabilitado), Comuniquese con el administrador</h1></center><br><span style='width:10%;''></span></span></div>";
+           echo "<meta http-equiv='Refresh' content='3;url=../index.php'>"; 
+    }
+}
+else {
+
+    echo"</br>";
+    echo"</br>";
+    echo"</br>";
+    echo"</br>";
+    echo"</br>";
+          echo" <link type='text/css' href='style/estilos de la pagina principal2.css' rel='stylesheet' /></link>
+          <script type='text/javascript' src='js/jquery_v1.7.1.js'></script>
+          <script   type='text/javascript' src='js/my_script.js'></script>";
+              echo"<div class='titulo'><center><br><h1 style='width:100%;'>Usuario o contraseña Invalido</h1></center><br><span style='width:10%;''></span></span></div>";
+           echo "<meta http-equiv='Refresh' content='3;url=../index.php'>"; 
+		}
+
+    }
+	else {
+
+    echo"</br>";
+    echo"</br>";
+    echo"</br>";
+    echo"</br>";
+    echo"</br>";
+          echo" <link type='text/css' href='style/estilos de la pagina principal2.css' rel='stylesheet' /></link>
+          <script type='text/javascript' src='js/jquery_v1.7.1.js'></script>
+          <script   type='text/javascript' src='js/my_script.js'></script>";
+              echo"<div class='titulo'><center><br><h1 style='width:100%;'>Error inesperado de conexion</h1></center><br><span style='width:10%;''></span></span></div>";
+           echo "<meta http-equiv='Refresh' content='3;url=../index.php'>"; 
+    }
+
+	 mysqli_close($conex);
+?>

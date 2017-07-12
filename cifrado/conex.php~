@@ -1,0 +1,12 @@
+<?php
+	//conexion a tabla 
+$dbuser="root"; 
+$dbhost="localhost"; 
+$dbpass=""; 
+$dbname="its_tienda" ;
+$conex= 
+mysqli_connect 
+($dbhost,$dbuser,$dbpass,$dbname)
+	
+	or  die ("error al seleccionar la Base de datos");
+?>
