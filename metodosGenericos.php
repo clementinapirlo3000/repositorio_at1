@@ -1,8 +1,4 @@
 <?php
-
-# Linea insertada para hacer una pruebita
-# con Git y ver como funciona la vaina
-
 function escupe($matriz)
 {
 	foreach ($matriz as $nombreCampo => $valor )
@@ -13,4 +9,6 @@ function escupe($matriz)
 }
 
 
+
+# Cambie la linea para el final, pra que no se vea feito
 ?>
