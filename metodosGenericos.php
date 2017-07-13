@@ -1,9 +1,6 @@
 <?php
-#
-#
-# llego fernando
-#
-#
+
+# probando push desde el directorio de mi escritorio
 
 
 # comentario para alex
