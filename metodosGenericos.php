@@ -1,9 +1,6 @@
 <?php
-#
-#
-# llego fernando
-#
-#
+
+########### editando de localhost  ##########
 
 
 # comentario para alex
