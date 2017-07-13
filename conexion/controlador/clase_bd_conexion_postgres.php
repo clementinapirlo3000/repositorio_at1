@@ -1,4 +1,5 @@
 <?php
+# otro comentario para alex
 
 	require("configuracion_bd_inicial.php");
  

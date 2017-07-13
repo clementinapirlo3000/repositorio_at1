@@ -1,4 +1,6 @@
 <?php
+# comentario para alex
+
 function escupe($matriz)
 {
 	foreach ($matriz as $nombreCampo => $valor )
@@ -12,10 +14,5 @@ function escupe($matriz)
 
 # Cambie la linea para el final, pra que no se vea feito
 
-
-#
-# otro comentario para eduardo
-#
-#
 
 ?>
